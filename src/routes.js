@@ -1,10 +1,9 @@
 import React from "react";
-import { Image, View } from "react-native";
+import { View } from "react-native";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { FontAwesome5, AntDesign, FontAwesome, MaterialCommunityIcons } from "@expo/vector-icons";
 
-import Logo from "./assets/google.png";
 
 import Home from "./pages/Home";
 import Post from "./pages/Post";
