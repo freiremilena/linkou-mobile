@@ -6,18 +6,11 @@ import Twitter from "../../assets/twitter.png";
 import Google from "../../assets/google.png";
 import styles from "./styles";
 
-const info = {
-  email: "",
-  Password: "",
-};
 
 export default function Login() {
-  // const navigation = useNavigation();
   const [passwordValue, setPasswordValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
-  // function navigateToHome() {
-  //   navigation.navigate("Home");
-  // }
+
   function login() {}
 
   return (
@@ -26,9 +19,11 @@ export default function Login() {
         <Image style={styles.image} source={Logo} />
 
         <View style={styles.accessButtons}>
-          <TouchableOpacity style={styles.accessButton}>Login</TouchableOpacity>
           <TouchableOpacity style={styles.accessButton}>
-            Cadastro
+            <Text>Login</Text>
+            </TouchableOpacity>
+          <TouchableOpacity style={styles.accessButton}>
+            <Text>Cadastro</Text>
           </TouchableOpacity>
         </View>
 
@@ -49,7 +44,6 @@ export default function Login() {
 
         <Text style={styles.align}>───────────── OU ──────────────</Text>
 
-        {/* icones-redes sociais */}
         <Text>Entre usando:</Text>
         <View style={styles.redesSociais}>
           <Image style={styles.redesSociaisIcon} source={Instagram} />
