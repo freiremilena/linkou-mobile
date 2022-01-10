@@ -32,8 +32,8 @@ export default function Routes() {
         },
         iconStyle: {
           flex: 0,
-          width: 30,
-          height: 30,
+          width: 40,
+          height: 40,
         },
         labelStyle: {
           fontSize: 13,
@@ -52,7 +52,7 @@ export default function Routes() {
             <View>
               <FontAwesome5
                 name="home"
-                size={20}
+                size={28}
                 color={focused ? "#EB7E69" : "#5F5D5D"}
               />
             </View>
@@ -68,7 +68,7 @@ export default function Routes() {
             <View>
               <FontAwesome5
                 name="hashtag"
-                size={20}
+                size={28}
                 color={focused ? "#EB7E69" : "#5F5D5D"}
               />
             </View>
@@ -84,7 +84,7 @@ export default function Routes() {
             <View>
               <AntDesign
                 name="pluscircle"
-                size={20}
+                size={28}
                 color={focused ? "#EB7E69" : "#5F5D5D"}
               />
             </View>
@@ -100,7 +100,7 @@ export default function Routes() {
             <View>
               <MaterialCommunityIcons
                 name="certificate-outline"
-                size={24}
+                size={30}
                 color={focused ? "#EB7E69" : "#5F5D5D"}
               />
             </View>
@@ -116,7 +116,7 @@ export default function Routes() {
             <View>
               <FontAwesome
                 name="user-circle-o"
-                size={20}
+                size={28}
                 color={focused ? "#EB7E69" : "#5F5D5D"}
               />
             </View>
