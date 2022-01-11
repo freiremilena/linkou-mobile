@@ -1,10 +1,11 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import Login from "./src/pages/Login/index";
-import Forgot from "./src/pages/Forgot/index";
-// import AppStack from "./src/routes";
+import Routes from "./src/routes";
 
 export default function App() {
-  return <Forgot />;
+  return(
+    <NavigationContainer>
+      <Routes/>
+    </NavigationContainer>
+  ) 
 }
