@@ -2,8 +2,12 @@ import React from "react";
 import { View } from "react-native";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { FontAwesome5, AntDesign, FontAwesome, MaterialCommunityIcons } from "@expo/vector-icons";
-
+import {
+  FontAwesome5,
+  AntDesign,
+  FontAwesome,
+  MaterialCommunityIcons,
+} from "@expo/vector-icons";
 
 import Home from "./pages/Home";
 import Post from "./pages/Post";
@@ -12,8 +16,11 @@ import Cursos from "./pages/Cursos";
 import Perfil from "./pages/Perfil";
 
 const Tab = createBottomTabNavigator();
+const EmptyScreen = () => {
+  return(null)
+}
 
-export default function Routes() {
+export default function Routes({ navigation, route }) {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -77,17 +84,22 @@ export default function Routes() {
       />
 
       <Tab.Screen
-        name="Post"
-        component={Post}
+        name="MainPost"
+        component={EmptyScreen}
+        listeners={({ navigation }) => ({
+          tabPress: event => {
+            event.preventDefault();
+            navigation.navigate("Post")
+          }
+        }
+        )}
         options={{
-          tabBarIcon: ({ focused }) => (
-            <View>
+          tabBarIcon: () => (
               <AntDesign
                 name="pluscircle"
                 size={28}
-                color={focused ? "#EB7E69" : "#5F5D5D"}
+                color={"#5F5D5D"}
               />
-            </View>
           ),
         }}
       />

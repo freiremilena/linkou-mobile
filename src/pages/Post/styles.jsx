@@ -5,6 +5,7 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    marginTop: 32
   },
 
   headerPostar: {

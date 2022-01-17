@@ -7,11 +7,13 @@ import Google from "../../assets/google.png";
 import styles from "./styles";
 
 
-export default function Login() {
+export default function Login({ navigation }) {
   const [passwordValue, setPasswordValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
 
-  function login() {}
+  function login() {
+    navigation.navigate('Rotas')
+  }
 
   return (
     <>
