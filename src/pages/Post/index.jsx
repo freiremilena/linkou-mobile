@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, Image, KeyboardAvoidingView, Platform, ScrollView } from "react-native";
 import Model from "../../assets/model.jpeg";
 import { Feather } from "@expo/vector-icons";
 import styles from "./styles";
 
 export default function Post() {
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView 
+      style={styles.container}
+      behavior={Platform.OS == "ios" ? "padding" : "height"}
+    >
+      <ScrollView>
       <View style={styles.headerPostar}>
         <Feather name="arrow-left" size={20} color="gray" />
         <TouchableOpacity style={styles.ButtonPostar}>
@@ -35,6 +39,7 @@ export default function Post() {
           style={styles.input}
         />
       </View>
-    </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
