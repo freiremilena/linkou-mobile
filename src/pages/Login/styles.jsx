@@ -5,16 +5,18 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "#fff"
   },
 
   image: {
     width: 91,
     height: 82,
-    marginBottom: 60,
+    marginBottom: 40,
+    marginTop: 40
   },
 
   input: {
-    marginBottom: 30,
+    marginBottom: 16,
     padding: 14,
     width: 310,
     height: 46,
@@ -22,6 +24,30 @@ export default StyleSheet.create({
     borderWidth: 1,
     backgroundColor: "#FFF4F6",
     borderRadius: 10,
+  },
+
+  emailInputText:{
+    marginLeft:10,
+    marginBottom: 4
+  },  
+  
+  passwordInputText:{
+    marginLeft:10,
+    marginBottom: 4
+  },  
+
+  forgot:{
+    width: 310,
+    display: "flex",
+    alignItems: "flex-end",
+
+  },
+
+  forgotText:{
+    marginTop: -8,
+    fontWeight: "100",
+    fontSize: 12,
+    color: "#555555",
   },
 
   button: {
@@ -33,7 +59,7 @@ export default StyleSheet.create({
     backgroundColor: "#F2BB94",
     height: 40,
     width: 166,
-    marginTop: 36,
+    marginTop: 62,
     borderRadius: 50,
   },
   buttonText: {
@@ -53,15 +79,42 @@ export default StyleSheet.create({
   },
 
   align: {
-    marginTop: 60,
+    marginTop: 40,
     marginBottom: 20,
   },
   accessButtons: {
+    maxWidth: 310,
+    minWidth: 310,
     flexDirection: "row",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding:20,
+    marginBottom: -32
+
   },
   accessButton: {
     fontSize: 24,
-    marginHorizontal: 40,
-    marginBottom: 54,
+    marginBottom: 48,
+    width: 94
+
   },
+
+  accessButtonPressed: {
+    fontSize: 24,
+    marginHorizontal: 40,
+    marginBottom: 48,
+  },
+
+  textAccess:{
+    color: "#989494",
+    fontSize: 21,
+    fontWeight: "500"
+  },
+
+  textAccessPressed:{
+    color: "#000",
+    fontSize: 21,
+    fontWeight: "500"
+  }
 });
