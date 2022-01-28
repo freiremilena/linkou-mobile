@@ -49,6 +49,26 @@ export default StyleSheet.create({
     marginTop: 95,
     borderRadius: 50,
   },
+
+  buttonDisabled: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    borderColor: "#d2d2d2",
+    borderWidth: 1,
+    backgroundColor: "#d2d2d2",
+    height: 40,
+    width: 166,
+    marginTop: 95,
+    borderRadius: 50,
+  },
+
+  buttonTextDisabled: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+
   buttonText: {
     color: "#9A460B",
     fontSize: 16,

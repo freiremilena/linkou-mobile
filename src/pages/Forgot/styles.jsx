@@ -4,7 +4,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    marginTop: 86
   },
 
   image: {
@@ -24,7 +24,7 @@ export default StyleSheet.create({
   },
 
   input: {
-    marginBottom: 30,
+    marginBottom: 16,
     padding: 14,
     width: 310,
     height: 46,
@@ -33,6 +33,12 @@ export default StyleSheet.create({
     backgroundColor: "#FFF4F6",
     borderRadius: 10,
   },
+
+  emailInputText:{
+    marginLeft:10,
+    marginBottom: 4
+  },  
+  
 
   button: {
     display: "flex",
