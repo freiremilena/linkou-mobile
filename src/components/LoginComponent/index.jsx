@@ -5,13 +5,28 @@ import { useNavigation } from "@react-navigation/native";
 import styles from "./styles";
 
 export default function LoginComponent() {
-  const [passwordValue, setPasswordValue] = useState("");
-  const [emailValue, setEmailValue] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [senhaInput, setSenhaInput] = useState("");
+  const [errorLogin, setErrorLogin] = useState("");
+
   const navigation = useNavigation();
 
-
   function enter() {
-    navigation.navigate("Rotas");
+
+    let data = {
+      email: emailInput,
+      password: senhaInput
+    }
+
+    if ( (data.email == "milena@email.com" || data.email == "Milena@email.com") && data.password == "12345") {
+      setErrorLogin(false)
+      setEmailInput("")
+      setSenhaInput("")
+      navigation.navigate("Rotas");
+    }
+    else{
+      setErrorLogin(true)
+    }
   }
 
   function forgot() {
@@ -23,8 +38,8 @@ export default function LoginComponent() {
       <View>
         <Text style={styles.emailInputText}>E-mail</Text>
         <TextInput
-          onChangeText={(text) => setEmailValue(text)}
-          value={emailValue}
+          onChangeText={(text) => setEmailInput(text)}
+          value={emailInput}
           style={styles.input}
         />
       </View>
@@ -32,19 +47,36 @@ export default function LoginComponent() {
       <View>
         <Text style={styles.passwordInputText}>Senha</Text>
         <TextInput
-          onChangeText={(text) => setPasswordValue(text)}
-          value={passwordValue}
+          onChangeText={(text) => setSenhaInput(text)}
+          value={senhaInput}
           style={styles.input}
         />
       </View>
+
       <View style={styles.forgot}>
         <TouchableOpacity onPress={() => forgot()}>
           <Text style={styles.forgotText}>Esqueceu da senha?</Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity style={styles.button} onPress={() => enter()}>
-        <Text style={styles.buttonText}>Entrar</Text>
-      </TouchableOpacity>
+
+      {errorLogin === true ? (
+          <Text style={{ marginTop: 22, color:"red" }}>Email ou senha errada</Text>
+      ) : (
+        <View />
+      )}
+      {emailInput === "" || senhaInput === "" ? (
+        <TouchableOpacity
+          disabled={true}
+          style={styles.buttonDisabled}
+          onPress={() => enter()}
+        >
+          <Text style={styles.buttonTextDisabled}>Entrar</Text>
+        </TouchableOpacity>
+      ) : (
+        <TouchableOpacity style={styles.button} onPress={() => enter()}>
+          <Text style={styles.buttonText}>Entrar</Text>
+        </TouchableOpacity>
+      )}
     </>
   );
 }

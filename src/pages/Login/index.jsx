@@ -10,9 +10,9 @@ import CadastroComponent from "../../components/CadastroComponent";
 
 export default function Login() {
   const [cadastroForm, setCadastroForm] = useState(false);
-
   const [loginIsPress, setLoginIsPress] = useState(true);
   const [registerIsPress, setRegisterIsPress] = useState(false);
+
 
   let bottonTextLogin = "Entre usando:";
   let bottonTextCadastro = "Cadastre usando:";
@@ -91,7 +91,7 @@ export default function Login() {
 
         <Text style={styles.align}>───────────── OU ──────────────</Text>
 
-        <Text>{cadastroForm ? bottonTextLogin : bottonTextCadastro}</Text>
+        <Text>{cadastroForm ? bottonTextCadastro  : bottonTextLogin}</Text>
         <View style={styles.redesSociais}>
           <Image style={styles.redesSociaisIcon} source={Instagram} />
           <Image style={styles.redesSociaisIcon} source={Google} />
